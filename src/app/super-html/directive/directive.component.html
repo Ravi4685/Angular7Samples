@@ -1,0 +1,103 @@
+
+
+<ol>
+<li *ngFor="let f of friends; let counter=index" >{{ f }}. Counter number {{ counter }}
+
+    <button (click)="displayText(counter)" >Click {{ f }}</button>
+
+
+</li>
+</ol>
+
+<hr>
+
+
+<div>Demo for *ngfor
+<table border="1">
+<thead>
+<tr>
+    <th>s.no</th>
+    <th>city</th>
+    <th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let l of locations">
+        <td>{{ l.id }}</td>
+        <td>{{ l.city }}</td>
+        <td>{{ l.code }}</td>
+</tr>
+</tbody>
+</table>
+
+<div>
+        <table border="1">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>UserName</th>
+                    <th>ZipCode</th>
+                    <th>ZeoLat</th>
+                    <th>ZeoLong</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let l of Users">
+                        <td>{{ l.id }}</td>
+                        <td>{{ l.username }}</td>
+                        <td>{{ l.address.zipcode }}</td>
+                        <td>{{ l.address.geo.lat }}</td>
+                        <td>{{ l.address.geo.lng }}</td>
+                        
+                        
+                </tr>
+                </tbody>
+                </table>
+
+</div>
+
+<hr>
+
+<div>
+    Demo of *ngif
+    <button (click)="toggleCheck()">Toggle Check</button>
+ <div class="box"></div>
+</div>
+<br>
+
+<div>
+        Demo of *ngif else        
+     <div class="yesbox" *ngIf="checkelse; else elseTemplate"></div>
+     I am here!
+     <button>T</button>
+    </div>
+
+<ng-template #elseTemplate>
+<div class="nobox">
+I am in  nobox
+</div>
+</ng-template>
+
+<div>
+demo of *ngswitch
+<div [ngSwitch]="city">
+ 
+    <span *ngSwitchCase="'040'">c</span>
+    <span *ngSwitchCase="'022'">m</span>
+    <span *ngSwitchCase="'033'">k</span>
+    <span *ngSwitchCase="'080'">B</span>
+    <span *ngSwitchDefault>Not available</span>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+

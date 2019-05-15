@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular001';
+  type = 'easy'
+  score = 10
+
+
+ displayMessage = function()
+{
+  //alert("curr score" + this.score)
+  this.score = this.score+10
+}
+
 }

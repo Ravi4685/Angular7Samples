@@ -1,0 +1,25 @@
+.desc{
+
+    background-color:pink;
+    height: 100px;
+    height: 100px;
+width:80%;
+float:right;
+position:  relative;
+}
+
+.thumbnail
+{
+background-color:chocolate;
+float:left;
+width:100px;
+height:100px;
+margin:2px;
+
+
+}
+
+.title
+{
+    background-color: aqua;
+}
